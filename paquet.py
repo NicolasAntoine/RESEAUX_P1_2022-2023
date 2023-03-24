@@ -1,13 +1,11 @@
 import pyshark
 import time
-capture = pyshark.FileCapture("Paquet WireShark screen share paquet 148.pcapng")
-j = 0
+capture = pyshark.FileCapture("Paquet WireShark screen share paquet 148.pcapng",display_filter="")
+j = 1
 for i in capture:
+    i.pretty_print()
+    if j == 34:
+         print(i.tcp.field_names)
+         time.sleep(20)
     print("packet n° " + str(j))
     j += 1
-    i.pretty_print()
-    time.sleep(1)
-    print("---------")
-    print(i[2].field_names)
-    time.sleep(5)
-    print("---------")
