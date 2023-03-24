@@ -1,0 +1,2 @@
+ - DNS résolu est-ce bien le nombre de querry et de réponses ?
+ - 
